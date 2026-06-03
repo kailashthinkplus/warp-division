@@ -29,7 +29,8 @@ export default function Hero() {
     <section
       className="
         relative
-        min-h-screen
+        min-h-[100svh]
+md:min-h-screen
         overflow-hidden
         bg-black
         text-white
@@ -76,8 +77,16 @@ export default function Hero() {
         "
       />
       {/* Vertical Grid Lines */}
-<div className="absolute inset-0 z-10 pointer-events-none">
-
+<div
+  className="
+    absolute
+    inset-0
+    z-10
+    pointer-events-none
+    opacity-30
+    md:opacity-100
+  "
+>
   <div className="container-width relative h-full">
 
     <div className="absolute left-0 top-0 h-full w-px bg-white/5" />
@@ -100,10 +109,12 @@ export default function Hero() {
           relative
           z-20
           flex
-          min-h-screen
+          min-h-[100svh]
+md:min-h-screen
           items-center
           pt-32
           pb-16
+          grid
         "
       >
 
@@ -149,22 +160,21 @@ export default function Hero() {
                 md:text-6xl
                 lg:text-7xl
                 xl:text-[62px]
+                maxsm-grid
               `}
             >
 
-              <span className="text-white">
-                Precision.
-              </span>
+<span className="text-white block md:inline">
+  Precision.
+</span>
 
-              <span className="gradient-text">
-                Performance.
-              </span>
+<span className="gradient-text block md:inline">
+  Performance.
+</span>
 
-              <br />
-
-              <span className="text-white">
-                Passion.
-              </span>
+<span className="text-white block">
+  Passion.
+</span>
 
             </motion.h1>
 
@@ -209,7 +219,7 @@ export default function Hero() {
             >
 
               {/* Primary */}
-              <button
+              <a href="#contact" rel="noopener noreferrer"
                 className={`
                   ${chakra.className}
                   bg-cyan-400
@@ -224,7 +234,11 @@ export default function Hero() {
                   duration-300
                   hover:scale-105
                   hover:shadow-[0_0_40px_rgba(0,194,255,0.35)]
-                  sm:text-sm
+sm:text-sm
+inline-flex
+items-center
+justify-center
+text-center
                 `}
                 style={{
                   clipPath:
@@ -232,7 +246,7 @@ export default function Hero() {
                 }}
               >
                 Book Appointment
-              </button>
+              </a>
 
             </motion.div>
 
@@ -241,12 +255,14 @@ export default function Hero() {
           {/* RIGHT SIDE DESKTOP */}
           <div
             className="
-              hidden
-              lg:flex
-              items-end
-              justify-end
-              pb-6
-              xl:pb-10
+    flex
+    justify-center
+    lg:items-end
+    lg:justify-end
+    mt-10
+    lg:mt-0
+    pb-6
+    xl:pb-10
             "
           >
 
@@ -259,16 +275,19 @@ export default function Hero() {
                 ease: [0.22, 1, 0.36, 1],
               }}
               className="
-                glass-card
-                w-full
-                max-w-[320px]
-                rounded-[24px]
-                border
-                border-white/10
-                bg-black/40
-                p-6
-                backdrop-blur-2xl
-                shadow-[0_0_80px_rgba(0,194,255,0.08)]
+  glass-card
+  h-fit
+  w-full
+  max-w-[90%]
+  sm:max-w-[420px]
+  lg:max-w-[320px]
+  mx-auto
+  rounded-[24px]
+  border
+  border-white/10
+  bg-black/40
+  p-6
+  backdrop-blur-2xl
               "
             >
 
@@ -319,7 +338,7 @@ export default function Hero() {
                 }}
               >
 
-                <p
+                <a href="tel:+917891011630" className="sr-only"
                   className={`
                     ${chakra.className}
                     text-lg
@@ -329,7 +348,7 @@ export default function Hero() {
                   `}
                 >
                   +91 789 10 11 630
-                </p>
+                </a>
 
               </motion.div>
 

@@ -251,12 +251,12 @@ onClick={() =>
 
   <motion.div
     animate={{
-  x: `calc(-${activeIndex * 33.333}% - ${activeIndex * 16}px)`,
-    }}
-    transition={{
-      duration: 0.6,
-      ease: "easeInOut",
-    }}
+  x:
+    typeof window !== "undefined" &&
+    window.innerWidth < 768
+      ? `calc(-${activeIndex * 100}% - ${activeIndex * 16}px)`
+      : `calc(-${activeIndex * 33.333}% - ${activeIndex * 16}px)`,
+}}
     className="flex gap-4"
   >
 

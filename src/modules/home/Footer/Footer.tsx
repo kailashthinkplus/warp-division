@@ -7,8 +7,6 @@ import {
   Mail,
   MapPin,
   Phone,
-  Instagram,
-  Youtube,
 } from "lucide-react"
 
 import { inter } from "@/lib/fonts"
