@@ -338,7 +338,7 @@ text-center
                 }}
               >
 
-                <a href="tel:+917891011630" className="sr-only"
+                <a href="tel:+917891011630"
                   className={`
                     ${chakra.className}
                     text-lg
