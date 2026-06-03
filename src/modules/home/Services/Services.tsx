@@ -161,10 +161,9 @@ export default function Services() {
           {/* LEFT COLUMN */}
           <div
             className="
-              relative
-              hidden
-              min-h-[2200px]
-              lg:block
+    relative
+  block
+  lg:block
             "
           >
 

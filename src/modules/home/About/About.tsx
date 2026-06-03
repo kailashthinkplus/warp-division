@@ -280,10 +280,12 @@ export default function About() {
               amount: 0.2,
             }}
             className="
-              relative
-              mx-auto
-              w-full
-              max-w-[700px]
+    order-1
+    lg:order-2
+    relative
+    mx-auto
+    w-full
+    max-w-[700px]
             "
           >
 
